@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Artists</title>
+</head>
+<body>
+<h1>Artists</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Nick</th>
+    </tr>
+    <tr th:each="artist : ${artists}">
+        <td th:text="${artist.id}">2</td>
+        <td th:text="${artist.firstName}">Elizabeth</td>
+        <td th:text="${artist.lastName}">Grant</td>
+        <td th:text="${artist.nick}">Lana Del Rey</td>
+    </tr>
+</table>
+
+ <a href="#" th:href="@{'/artist/new'}" role="button" class="btn btn-success">Dodaj</a>
+</body>
+</html>
